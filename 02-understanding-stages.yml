@@ -10,7 +10,7 @@ stages:
   - job: FirstJob
     steps:
     - bash: eco Build First Job
-  - job: FirstJob
+  - job: SecondJob
     steps:
     - bash: eco Build Second Job
 - stage: DevDeploy
