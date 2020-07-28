@@ -9,22 +9,22 @@ stages:
   jobs:
   - job: FirstJob
     steps:
-    - script: eco Build First Job
+    - script: echo Build First Job
   - job: SecondJob
     steps:
-    - script: eco Build Second Job
+    - script: echo Build Second Job
 - stage: DevDeploy
   jobs:
   - job: DevJob
     steps:
-    - script: eco Build Dev Job
+    - script: echo Build Dev Job
 - stage: QADeploy
   jobs:
   - job: QAJob
     steps:
-    - script: eco Build QA Job
+    - script: echo Build QA Job
 - stage: PRODDeploy
   jobs:
   - job: PRODDeploy
     steps:
-    - script: eco Build PROD Job
+    - script: echo Build PROD Job
