@@ -9,22 +9,22 @@ stages:
   jobs:
   - job: FirstJob
     steps:
-    - bash: eco Build First Job
+    - script: eco Build First Job
   - job: SecondJob
     steps:
-    - bash: eco Build Second Job
+    - script: eco Build Second Job
 - stage: DevDeploy
   jobs:
   - job: DevJob
     steps:
-    - bash: eco Build Dev Job
+    - script: eco Build Dev Job
 - stage: QADeploy
   jobs:
-    - job: QAJob
-      steps:
-      - bash: eco Build QA Job
+  - job: QAJob
+    steps:
+    - script: eco Build QA Job
 - stage: PRODDeploy
   jobs:
   - job: PRODDeploy
     steps:
-    - bash: eco Build PROD Job
+    - script: eco Build PROD Job
