@@ -9,22 +9,32 @@ stages:
   jobs:
   - job: FirstJob
     steps:
-    - script: echo Build First Job
+    - bash: echo Build First Job
+    - bash: echo $(PipelineLevelVariable)
   - job: SecondJob
+    variables:
+      second: SecondVar
     steps:
-    - script: echo Build Second Job
+    - bash: echo Build Second Job
+    - bash: echo $(second)
 - stage: DevDeploy
+  variables:
+    enviroment: Dev
   jobs:
   - job: DevJob
     steps:
-    - script: echo Build Dev Job
+    - bash: echo Build Dev Job
+    - bash: echo Enviroment= $(enviroment)
 - stage: QADeploy
+  variables:
+    enviroment: QA
   jobs:
   - job: QAJob
     steps:
-    - script: echo Build QA Job
+    - bash: echo Build QA Job
+    - bash: echo Enviroment= $(enviroment)
 - stage: PRODDeploy
   jobs:
   - job: PRODDeploy
     steps:
-    - script: echo Build PROD Job
+    - bash: echo Build PROD Job
