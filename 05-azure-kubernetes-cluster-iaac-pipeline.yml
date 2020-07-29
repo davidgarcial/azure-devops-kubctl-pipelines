@@ -22,7 +22,7 @@ steps:
     backendServiceArm: 'azure-resource-manager'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'teraform-backend-rg'
-    backendAzureRmResourceGroupLocation: 'East US'
+    backendAzureRmResourceGroupLocation: 'westus'
     backendAzureRmStorageAccountName: 'storageaccdevops'
     backendAzureRmContainerName: 'storageaccdevopscontainer'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
