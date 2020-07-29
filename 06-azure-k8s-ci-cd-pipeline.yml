@@ -56,7 +56,7 @@ stages:
     - task: KubernetesManifest@0
       inputs:
         action: 'deploy'
-        kubernetesServiceConnection: 'azure-kubernetes-connection'
+        kubernetesServiceConnection: 'k8s-connection'
         namespace: 'default'
         manifests: '$(System.ArtifactsDirectory)/configuration/kubernetes/deployment.yaml'
         containers: 'davidgarcial/currency-exchange-devops:$(tag)'
